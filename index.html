@@ -353,4 +353,68 @@
     </div>
   </div>
 </section>
+
+<!-- Section 4: Quality and Naturalness -->
+<section class="section">
+  <div class="audio-section container is-max-desktop has-text-centered">
+    <h2 class="title is-3">4. Quality and Naturalness</h2>
+    <p>To evaluate the overall quality and naturalness of synthesized speech, we conducted subjective listening tests comparing our EMORL model with various baseline models. Participants were asked to rate the naturalness and quality of speech samples on a scale from 1 to 5. The results demonstrate that our EMORL model achieves competitive quality and naturalness compared to state-of-the-art models.</p>
+
+    <p><strong>Test sentences:</strong><br>
+    1. All smile were real and the happier the more sincere.<br>
+    2. Monster made a deep bow.<br>
+    3. They'd never know I'd regular ran away.</p>
+
+    <div class="table-wrapper">
+      <table class="table is-bordered is-fullwidth is-centered">
+        <thead>
+          <tr>
+            <th>Sentence</th>
+            <th>CosyVoice2</th>
+            <th>EmoSpeech</th>
+            <th>EmoSphere++</th>
+            <th>Spark-TTS</th>
+            <th>EMORL w/o GRPO</th>
+            <th><strong>EMORL</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><audio controls src="static/EMORL-demo/4_quality/cosy/1.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emospeech/1.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emosphere++/1.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/spark/1.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL_no_grpo/1.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL/1.wav"></audio></td></tr>
+          <tr><td>2</td><td><audio controls src="static/EMORL-demo/4_quality/cosy/2.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emospeech/2.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emosphere++/2.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/spark/2.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL_no_grpo/2.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL/2.wav"></audio></td></tr>
+          <tr><td>3</td><td><audio controls src="static/EMORL-demo/4_quality/cosy/3.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emospeech/3.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/emosphere++/3.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/spark/3.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL_no_grpo/3.wav"></audio></td><td><audio controls src="static/EMORL-demo/4_quality/EMORL/3.wav"></audio></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Effect of Part-of-Speech Emphasis on Emotion Intensity -->
+<section class="section">
+  <div class="audio-section container is-max-desktop has-text-centered">
+    <h2 class="title is-3">5. Effect of Part-of-Speech Emphasis on Emotion Intensity</h2>
+    <p>To investigate how different parts of speech affect emotion intensity when emphasized, we conducted experiments using various word types in emphasis control. The sentence used is "She became extremely emotional after hearing the good news." We compare the effect of emphasizing different parts of speech on emotional expression across different emotions.</p>
+
+    <div class="table-wrapper">
+      <table class="table is-bordered is-fullwidth is-centered">
+        <thead>
+          <tr>
+            <th>Emotion</th>
+            <th>No Emphasis</th>
+            <th>extremely (adverb)</th>
+            <th>after (other)</th>
+            <th>hearing (verb)</th>
+            <th>good (adjective)</th>
+            <th>news (noun)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Angry</td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/no.wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/extremely(adverb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/after(other).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/hearing(verb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/good(adjective).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/angry/news(noun).wav"></audio></td></tr>
+          <tr><td>Happy</td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/no.wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/extremely(adverb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/after(other).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/hearing(verb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/good(adjective).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/happy/news(noun).wav"></audio></td></tr>
+          <tr><td>Sad</td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/no.wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/extremely(adverb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/after(other).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/hearing(verb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/good(adjective).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/sad/news(noun).wav"></audio></td></tr>
+          <tr><td>Surprise</td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/no.wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/extremely(adverb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/after(other).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/hearing(verb).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/good(adjective).wav"></audio></td><td><audio controls src="static/EMORL-demo/5_ex/1/surprise/news(noun).wav"></audio></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 <p class="has-text-centered mt-5">Thanks for your patience!<br><br><br><br><br></p>

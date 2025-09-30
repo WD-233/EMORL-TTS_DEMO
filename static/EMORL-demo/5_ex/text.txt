@@ -18,9 +18,3 @@ I honestly *believe* you can achieve great success.
 I honestly believe *you* can achieve great success.
 I honestly believe you *can* achieve great success.
 I honestly believe you can achieve *great* success.
-
-python -m cli.inference \
-    --text "All smile were real and the happier the more sincere." \
-    --device 0 \
-    --save_dir "outputs/test_20250930/" \
-    --model_dir pretrained_models/Spark-TTS-0.5B \
