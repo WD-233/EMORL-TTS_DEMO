@@ -1,0 +1,26 @@
+She became extremely emotional after hearing the good news.
+She became *extremely* emotional after hearing the good news.
+She became extremely *emotional* after hearing the good news.
+She became extremely emotional *after* hearing the good news.
+She became extremely emotional after *hearing* the good news.
+She became extremely emotional after hearing the good *news*.
+
+She handled the difficult situation perfectly well and gracefully.
+She *handled* the difficult situation perfectly well and gracefully.
+She handled the *difficult* situation perfectly well and gracefully.
+She handled the difficult *situation* perfectly well and gracefully.
+She handled the difficult situation *perfectly* well and gracefully.
+She handled the difficult situation perfectly well *and* gracefully.
+
+I honestly believe you can achieve great success.
+I *honestly* believe you can achieve great success.
+I honestly *believe* you can achieve great success.
+I honestly believe *you* can achieve great success.
+I honestly believe you *can* achieve great success.
+I honestly believe you can achieve *great* success.
+
+python -m cli.inference \
+    --text "All smile were real and the happier the more sincere." \
+    --device 0 \
+    --save_dir "outputs/test_20250930/" \
+    --model_dir pretrained_models/Spark-TTS-0.5B \
