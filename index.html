@@ -178,53 +178,84 @@
   </div>
 </section>
 
-<!-- Section 2: Emotion Accuracy -->
+<!-- Section 2: Emotion Intensity -->
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
-    <h2 class="title is-3">2. Emotion Accuracy</h2>
-    <p>To ensure fairness, all CosyVoice2-generated samples were conditioned on a neutral reference speaker's audio and a textual emotion prompt, ensuring that only the speaker's identity and emotion labels were provided as input. During inference, our proposed model consistently utilized a large language model to predict suitable emphasis positions, which were then used as input for testing. Results demonstrate that EME-TTS achieves higher emotion accuracy in synthesized speech compared to baseline models, highlighting its overall effectiveness in generating emotionally expressive speech.</p>
+    <h2 class="title is-3">2. Emotion Intensity</h2>
+    <p>To evaluate the fine-grained emotion control capability of our proposed model, we conducted experiments on emotion intensity control. Participants were asked to rate the intensity levels of emotional expressions in synthesized speech samples. The results demonstrate that our EMORL model can effectively control emotion intensity across different levels (weak, medium, strong) compared to baseline models.</p>
 
-    <h3 class="title is-5">Sentence 1: I chose the right way.</h3>
+    <h3 class="title is-5">Angry: And what are doves. and what are doves.</h3>
     <div class="table-wrapper">
       <table class="table is-bordered is-fullwidth is-centered">
         <thead>
           <tr>
-            <th>Emotion</th>
-            <th>Emphasized Word</th>
-            <th>CosyVoice2</th>
-            <th>EmoSpeech</th>
-            <th>EME-TTS w/o EPE</th>
-            <th>EME-TTS</th>
+            <th>Intensity</th>
+            <th>Relative Attribute</th>
+            <th>EmoSphere++</th>
+            <th><strong>EMORL</strong></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Neutral</td><td>right</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_10.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_0.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_0_8_6_8.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_0_8_6_8.wav"></audio></td></tr>
-          <tr><td>Angry</td><td>right</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_11.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_1.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_1_8_6_8.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_1_8_6_8.wav"></audio></td></tr>
-          <tr><td>Happy</td><td>right</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_12.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_2.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_2_8_6_8.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_2_8_6_8.wav"></audio></td></tr>
-          <tr><td>Sad</td><td>way</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_13.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_3.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_3_8_9_10.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_3_8_9_10.wav"></audio></td></tr>
-          <tr><td>Surprise</td><td>chose</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_14.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_4.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_4_8_1_3.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_4_8_1_3.wav"></audio></td></tr>
+          <tr><td>Weak</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/angry_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/angry_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/angry_weak.wav"></audio></td></tr>
+          <tr><td>Medium</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/angry_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/angry_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/angry_medium.wav"></audio></td></tr>
+          <tr><td>Strong</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/angry_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/angry_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/angry_strong.wav"></audio></td></tr>
         </tbody>
       </table>
         </div>
-    <h3 class="title is-5">Sentence 2: Rabbit gave dog a hurrying up sort of nudge.</h3>
+
+    <h3 class="title is-5">Happy: They never know id regular ran away.</h3>
     <div class="table-wrapper">
       <table class="table is-bordered is-fullwidth is-centered">
         <thead>
           <tr>
-            <th>Emotion</th>
-            <th>Emphasized Word</th>
-            <th>CosyVoice2</th>
-            <th>EmoSpeech</th>
-            <th>EME-TTS w/o EPE</th>
-            <th>EME-TTS</th>
+            <th>Intensity</th>
+            <th>Relative Attribute</th>
+            <th>EmoSphere++</th>
+            <th><strong>EMORL</strong></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Neutral</td><td>gave</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_15.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_50_0.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/R_AE1_B_AH0_T_0_8_5_7.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/R_AE1_B_AH0_T_0_8_5_7.wav"></audio></td></tr>
-          <tr><td>Angry</td><td>hurrying</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_16.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_50_1.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/R_AE1_B_AH0_T_1_8_12_16.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/R_AE1_B_AH0_T_1_8_12_16.wav"></audio></td></tr>
-          <tr><td>Happy</td><td>nudge</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_17.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_50_2.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/R_AE1_B_AH0_T_2_8_25_27.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/R_AE1_B_AH0_T_2_8_25_27.wav"></audio></td></tr>
-          <tr><td>Sad</td><td>nudge</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_18.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_50_3.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/R_AE1_B_AH0_T_3_8_25_27.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/R_AE1_B_AH0_T_3_8_25_27.wav"></audio></td></tr>
-          <tr><td>Surprise</td><td>hurrying</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_19.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_50_4.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/R_AE1_B_AH0_T_4_8_12_16.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/R_AE1_B_AH0_T_4_8_12_16.wav"></audio></td></tr>
+          <tr><td>Weak</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/happy_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/happy_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/happy_weak.wav"></audio></td></tr>
+          <tr><td>Medium</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/happy_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/happy_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/happy_medium.wav"></audio></td></tr>
+          <tr><td>Strong</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/happy_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/happy_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/happy_strong.wav"></audio></td></tr>
+        </tbody>
+      </table>
+        </div>
+
+    <h3 class="title is-5">Sad: This used to be jerrys occupation.</h3>
+    <div class="table-wrapper">
+      <table class="table is-bordered is-fullwidth is-centered">
+        <thead>
+          <tr>
+            <th>Intensity</th>
+            <th>Relative Attribute</th>
+            <th>EmoSphere++</th>
+            <th><strong>EMORL</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Weak</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/sad_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/sad_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/sad_weak.wav"></audio></td></tr>
+          <tr><td>Medium</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/sad_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/sad_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/sad_medium.wav"></audio></td></tr>
+          <tr><td>Strong</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/sad_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/sad_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/sad_strong.wav"></audio></td></tr>
+        </tbody>
+      </table>
+        </div>
+
+    <h3 class="title is-5">Surprise: This used to be jerrys occupation.</h3>
+    <div class="table-wrapper">
+      <table class="table is-bordered is-fullwidth is-centered">
+        <thead>
+          <tr>
+            <th>Intensity</th>
+            <th>Relative Attribute</th>
+            <th>EmoSphere++</th>
+            <th><strong>EMORL</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Weak</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/surprise_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/surprise_weak.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/surprise_weak.wav"></audio></td></tr>
+          <tr><td>Medium</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/surprise_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/surprise_medium.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/surprise_medium.wav"></audio></td></tr>
+          <tr><td>Strong</td><td><audio controls src="static/EMORL-demo/2_intensity/relative attribute/surprise_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/emosphere++/surprise_strong.wav"></audio></td><td><audio controls src="static/EMORL-demo/2_intensity/EMORL/surprise_strong.wav"></audio></td></tr>
         </tbody>
       </table>
     </div>
