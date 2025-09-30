@@ -130,7 +130,7 @@
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
     <h2 class="title is-3">1. Emotion Accuracy</h2>
-    <p>To evaluate the emotion accuracy of our proposed model, we conducted subjective listening tests where participants were asked to identify the emotional content in synthesized speech samples. The results demonstrate that our EMORL model achieves superior emotion accuracy compared to baseline models across different emotional categories.</p>
+    <p>We test if the generated speech conveys the correct target emotion, and EMORL-TTS achieves higher accuracy across all compared models.</p>
 
     <h3 class="title is-5">Sentence 1: The project turned out extremely successful beyond our hopes.</h3>
     <div class="table-wrapper">
@@ -182,7 +182,7 @@
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
     <h2 class="title is-3">2. Emotion Intensity</h2>
-    <p>To evaluate the fine-grained emotion control capability of our proposed model, we conducted experiments on emotion intensity control. Participants were asked to rate the intensity levels of emotional expressions in synthesized speech samples. The results demonstrate that our EMORL model can effectively control emotion intensity across different levels (weak, medium, strong) compared to baseline models.</p>
+    <p>We evaluate whether weak, medium, and strong emotions can be clearly distinguished, and EMORL-TTS provides more fine-grained and robust control than all other systems.</p>
 
     <h3 class="title is-5">Angry: And what are doves. and what are doves.</h3>
     <div class="table-wrapper">
@@ -266,7 +266,7 @@
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
     <h2 class="title is-3">3. Emphasis Accuracy</h2>
-    <p>To evaluate the emphasis accuracy of our proposed model, we conducted subjective listening tests where participants were asked to identify the emphasized words in synthesized speech samples. The results demonstrate that our EMORL model can accurately produce emphasis at specified positions across different emotional contexts compared to baseline models.</p>
+    <p>We check if emphasis is perceived at the intended words, and EMORL-TTS delivers clearer and more reliable emphasis across different emotions than all compared approaches; the only exception is surprise, where emphasis control is weaker because adding emphasis tends to confuse the emotion recognizer, and the RL stage prioritizes emotion accuracy as the main reward.</p>
 
     <h3 class="title is-5">I *chose* the right way.</h3>
     <div class="table-wrapper">
@@ -358,7 +358,7 @@
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
     <h2 class="title is-3">4. Quality and Naturalness</h2>
-    <p>To evaluate the overall quality and naturalness of synthesized speech, we conducted subjective listening tests comparing our EMORL model with various baseline models. Participants were asked to rate the naturalness and quality of speech samples on a scale from 1 to 5. The results demonstrate that our EMORL model achieves competitive quality and naturalness compared to state-of-the-art models.</p>
+    <p>We assess MOS and NISQA scores, showing that EMORL-TTS surpasses all baselines in controllability while still preserving the high synthesis quality and naturalness unique to LLM-based TTS.</p>
 
     <p><strong>Sentences:</strong><br>
     1. All smile were real and the happier the more sincere.<br>
@@ -392,7 +392,7 @@
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
     <h2 class="title is-3">5. Effect of Part-of-Speech Emphasis on Emotion Intensity</h2>
-    <p>To investigate how different parts of speech affect emotion intensity when emphasized, we conducted experiments using various word types in emphasis control. We compare the effect of emphasizing different parts of speech on emotional expression across different emotions.</p>
+    <p>As an extended study within EMORL-TTS, we investigate how emphasis placement affects perceived intensity, and find that emphasizing adverbs brings the most significant enhancement of emotion intensity.</p>
 
     <h3 class="title is-5">Sentence: She became extremely emotional after hearing the good news.</h3>
     <div class="table-wrapper">
