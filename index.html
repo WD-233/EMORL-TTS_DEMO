@@ -75,12 +75,12 @@
           <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">EMORL-TTS: Reinforcement Learning for Fine-Grained Emotion Control in LLM-based TTS</h1>
             <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="#">Haoxun Li</a>, </span>
-            <span class="author-block"><a href="#">Yu Liu</a>, </span>
-            <span class="author-block"><a href="#">Yuqing Sun</a>, </span>
-            <span class="author-block"><a href="#">Hanlei Shi</a>, </span>
-            <span class="author-block"><a href="#">Leyuan Qu</a>, </span>
-            <span class="author-block"><a href="#">Taihao Li</a><sup>*</sup></span>
+            <span class="author-block" style="color: #3273dc;">Haoxun Li, </span>
+            <span class="author-block" style="color: #3273dc;">Yu Liu, </span>
+            <span class="author-block" style="color: #3273dc;">Yuqing Sun, </span>
+            <span class="author-block" style="color: #3273dc;">Hanlei Shi, </span>
+            <span class="author-block" style="color: #3273dc;">Leyuan Qu, </span>
+            <span class="author-block" style="color: #3273dc;">Taihao Li<sup>*</sup></span>
                   </div>
                   <div class="is-size-5 publication-authors">
             <span class="author-block">Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences, China</span>
@@ -128,7 +128,7 @@
 
 <!-- Section 1: Emotion Accuracy -->
 <section class="section">
-  <div class="audio-section container is-max-desktop has-text-centered">
+  <div class="audio-section container has-text-centered">
     <h2 class="title is-3">1. Emotion Accuracy</h2>
     <p>We test if the generated speech conveys the correct target emotion, and EMORL-TTS achieves higher accuracy across all compared models.</p>
 
@@ -180,7 +180,7 @@
 
 <!-- Section 2: Emotion Intensity -->
 <section class="section">
-  <div class="audio-section container is-max-desktop has-text-centered">
+  <div class="audio-section container has-text-centered">
     <h2 class="title is-3">2. Emotion Intensity</h2>
     <p>We evaluate whether weak, medium, and strong emotions can be clearly distinguished, and EMORL-TTS provides more fine-grained and robust control than all other systems.</p>
 
@@ -264,9 +264,9 @@
 
 <!-- Section 3: Emphasis Accuracy -->
 <section class="section">
-  <div class="audio-section container is-max-desktop has-text-centered">
+  <div class="audio-section container has-text-centered">
     <h2 class="title is-3">3. Emphasis Accuracy</h2>
-    <p>We check if emphasis is perceived at the intended words, and EMORL-TTS delivers clearer and more reliable emphasis across different emotions than all compared approaches; in the surprise emotion, however, emphasis control is relatively weaker, since adding emphasis can cause misclassification into other emotions, and the RL stage prioritizes emotion accuracy as the core reward.</p>
+    <p>We check if emphasis is perceived at the intended words (with emphasized words marked by * in this demo page), and EMORL-TTS delivers clearer and more reliable emphasis across different emotions than all compared approaches; in the surprise emotion, however, emphasis control is relatively weaker, since adding emphasis can cause misclassification into other emotions, and the RL stage prioritizes emotion accuracy as the core reward.</p>
 
     <h3 class="title is-5">I *chose* the right way.</h3>
     <div class="table-wrapper">
@@ -356,7 +356,7 @@
 
 <!-- Section 4: Quality and Naturalness -->
 <section class="section">
-  <div class="audio-section container is-max-desktop has-text-centered">
+  <div class="audio-section container has-text-centered">
     <h2 class="title is-3">4. Quality and Naturalness</h2>
     <p>We assess MOS and NISQA scores, showing that EMORL-TTS surpasses all baselines in controllability while still preserving the high synthesis quality and naturalness unique to LLM-based TTS.</p>
 
@@ -390,7 +390,7 @@
 
 <!-- Section 5: Effect of Part-of-Speech Emphasis on Emotion Intensity -->
 <section class="section">
-  <div class="audio-section container is-max-desktop has-text-centered">
+  <div class="audio-section container has-text-centered">
     <h2 class="title is-3">5. Effect of Part-of-Speech Emphasis on Emotion Intensity</h2>
     <p>As an extended study within EMORL-TTS, we investigate how emphasis placement affects perceived emotion intensity, and find from EMORL-generated speech that emphasizing adverbs brings the most significant enhancement of emotion intensity.</p>
 
@@ -401,11 +401,11 @@
           <tr>
             <th>Emotion</th>
             <th>No Emphasis</th>
-            <th>extremely (adverb)</th>
-            <th>after (other)</th>
-            <th>hearing (verb)</th>
-            <th>good (adjective)</th>
-            <th>news (noun)</th>
+            <th>*extremely*(Adverb)</th>
+            <th>*after*(Other)</th>
+            <th>*hearing*(Verb)</th>
+            <th>*good*(Adjective)</th>
+            <th>*news*(Noun)</th>
           </tr>
         </thead>
         <tbody>
