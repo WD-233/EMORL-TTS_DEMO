@@ -19,10 +19,10 @@
   <link rel="icon" type="image/x-icon" href="static/images/logo4.76133485.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <style>
     body {
@@ -68,37 +68,39 @@
 <body>
 
 <!-- Academic Project Page Template 保留顶部样式和字体 -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">EMORL-TTS: Reinforcement Learning for Fine-Grained Emotion Control in LLM-based TTS</h1>
-          <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="#">Haoxun Li</a>, </span>
-            <span class="author-block"><a href="#">Leyuan Qu</a><sup>*</sup>, </span>
-            <span class="author-block"><a href="#">Jiaxi Hu</a>, </span>
+            <span class="author-block"><a href="#">Yu Liu</a>, </span>
+            <span class="author-block"><a href="#">Yuqing Sun</a>, </span>
+            <span class="author-block"><a href="#">Hanlei Shi</a>, </span>
+            <span class="author-block"><a href="#">Leyuan Qu</a>, </span>
             <span class="author-block"><a href="#">Taihao Li</a><sup>*</sup></span>
-          </div>
-          <div class="is-size-5 publication-authors">
+                  </div>
+                  <div class="is-size-5 publication-authors">
             <span class="author-block">Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences, China<br>Under Review</span>
             <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
-          </div>
+                  </div>
           <!--
-          <div class="publication-links">
-            <span class="link-block">
+                    <div class="publication-links">
+                      <span class="link-block">
               <a href="#" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Paper</span>
-              </a>
-            </span>
-            <span class="link-block">
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
               <a href="#" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-              </a>
-            </span>
-          </div>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
           -->
         </div>
       </div>
@@ -116,7 +118,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, emotional Text-to-Speech (TTS) synthesis and emphasis-controllable speech synthesis have advanced significantly. However, their interaction remains underexplored. We propose Emphasis Meets Emotion TTS (EME-TTS), a novel framework designed to address two key research questions: (1) how to effectively utilize emphasis to enhance the expressiveness of emotional speech, and (2) how to maintain the perceptual clarity and stability of target emphasis across different emotions. EME-TTS employs weakly supervised learning with emphasis pseudo-labels and variance-based emphasis features. Additionally, the proposed Emphasis Perception Enhancement (EPE) block enhances the interaction between emotional signals and emphasis positions. Experimental results show that EME-TTS, when combined with large language models for emphasis position prediction, enables more natural emotional speech synthesis while preserving stable and distinguishable target emphasis across emotions.
+            Recent LLM-based TTS systems achieve strong quality and zero-shot ability, but lack fine-grained emotional control due to their reliance on discrete speech tokens. Existing approaches either limit emotions to categorical labels or cannot generalize to LLM-based architectures. We propose EMORL-TTS (Fine-grained Emotion-controllable TTS with Reinforcement Learning), a framework that unifies global intensity control in the VAD space with local emphasis regulation. Our method combines supervised fine-tuning with reinforcement learning guided by task-specific rewards for emotion category, intensity, and emphasis. Moreover, we further investigate how emphasis placement modulates fine-grained emotion intensity. Experiments show that EMORL-TTS improves emotion accuracy, intensity differentiation, and emphasis clarity, while preserving synthesis quality comparable to strong LLM-based baselines.
           </p>
         </div>
       </div>
@@ -124,50 +126,52 @@
   </div>
 </section>
 
-<!-- Section 1: Emphasis Accuracy -->
+<!-- Section 1: Emotion Accuracy -->
 <section class="section">
   <div class="audio-section container is-max-desktop has-text-centered">
-    <h2 class="title is-3">1. Emphasis Accuracy</h2>
-    <p>We designed a more challenging subjective test, distinct from previous studies on emphasis control. Instead of rating the degree of emphasis at a predefined position, participants were asked to identify the emphasized words in 80 randomly shuffled speech samples. The results indicate that the emphasis produced by our proposed model was clearly perceivable across different emotions.</p>
+    <h2 class="title is-3">1. Emotion Accuracy</h2>
+    <p>To evaluate the emotion accuracy of our proposed model, we conducted subjective listening tests where participants were asked to identify the emotional content in synthesized speech samples. The results demonstrate that our EMORL model achieves superior emotion accuracy compared to baseline models across different emotional categories.</p>
 
-    <h3 class="title is-5">Sentence 1: She is now choosing skirt to wear.</h3>
+    <h3 class="title is-5">Sentence 1: The project turned out extremely successful beyond our hopes.</h3>
     <div class="table-wrapper">
       <table class="table is-bordered is-fullwidth is-centered">
         <thead>
           <tr>
             <th>Emotion</th>
-            <th>Emphasized Word</th>
-            <th>EME-TTS w/o EPE</th>
-            <th>EME-TTS</th>
+            <th>CosyVoice2</th>
+            <th>EmoSpeech</th>
+            <th>EMORL w/o GRPO</th>
+            <th><strong>EMORL</strong></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Neutral</td><td>choosing</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/SH_IY1_IH0_Z_N_0_8_6_10.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/SH_IY1_IH0_Z_N_0_8_6_10.wav"></audio></td></tr>
-          <tr><td>Angry</td><td>now</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/SH_IY1_IH0_Z_N_1_8_4_5.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/SH_IY1_IH0_Z_N_1_8_4_5.wav"></audio></td></tr>
-          <tr><td>Happy</td><td>choosing</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/SH_IY1_IH0_Z_N_2_8_6_10.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/SH_IY1_IH0_Z_N_2_8_6_10.wav"></audio></td></tr>
-          <tr><td>Sad</td><td>wear</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/SH_IY1_IH0_Z_N_3_8_17_19.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/SH_IY1_IH0_Z_N_3_8_17_19.wav"></audio></td></tr>
-          <tr><td>Surprise</td><td>skirt</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/SH_IY1_IH0_Z_N_4_8_11_14.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/SH_IY1_IH0_Z_N_4_8_11_14.wav"></audio></td></tr>
+          <tr><td>Neutral</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/neutral1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/neutral1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/neutral1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/neutral1.wav"></audio></td></tr>
+          <tr><td>Angry</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/angry1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/angry1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/angry1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/angry1.wav"></audio></td></tr>
+          <tr><td>Happy</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/happy1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/happy1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/happy1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/happy1.wav"></audio></td></tr>
+          <tr><td>Sad</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/sad1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/sad1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/sad1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/sad1.wav"></audio></td></tr>
+          <tr><td>Surprise</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/surprise1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/surprise1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/surprise1.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/surprise1.wav"></audio></td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3 class="title is-5">Sentence 2: Must a name mean something?</h3>
+    <h3 class="title is-5">Sentence 2: That was a truly unforgettable experience for us all.</h3>
     <div class="table-wrapper">
       <table class="table is-bordered is-fullwidth is-centered">
         <thead>
           <tr>
             <th>Emotion</th>
-            <th>Emphasized Word</th>
-            <th>EME-TTS w/o EPE</th>
-            <th>EME-TTS</th>
+            <th>CosyVoice2</th>
+            <th>EmoSpeech</th>
+            <th>EMORL w/o GRPO</th>
+            <th><strong>EMORL</strong></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Neutral</td><td>mean</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/M_AH1_S_T_AH0_0_8_8_10.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/M_AH1_S_T_AH0_0_8_8_10.wav"></audio></td></tr>
-          <tr><td>Angry</td><td>must</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/M_AH1_S_T_AH0_1_8_0_3.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/M_AH1_S_T_AH0_1_8_0_3.wav"></audio></td></tr>
-          <tr><td>Happy</td><td>name</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/M_AH1_S_T_AH0_2_8_5_7.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/M_AH1_S_T_AH0_2_8_5_7.wav"></audio></td></tr>
-          <tr><td>Sad</td><td>mean</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/M_AH1_S_T_AH0_3_8_8_10.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/M_AH1_S_T_AH0_3_8_8_10.wav"></audio></td></tr>
-          <tr><td>Surprise</td><td>something</td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/M_AH1_S_T_AH0_4_8_11_16.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/M_AH1_S_T_AH0_4_8_11_16.wav"></audio></td></tr>
+          <tr><td>Neutral</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/neutral2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/neutral2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/neutral2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/neutral2.wav"></audio></td></tr>
+          <tr><td>Angry</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/angry2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/angry2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/angry2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/angry2.wav"></audio></td></tr>
+          <tr><td>Happy</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/happy2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/happy2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/happy2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/happy2.wav"></audio></td></tr>
+          <tr><td>Sad</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/sad2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/sad2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/sad2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/sad2.wav"></audio></td></tr>
+          <tr><td>Surprise</td><td><audio controls src="static/EMORL-demo/1_emo/cosy/surprise2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/emospeech/surprise2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL_no_grpo/surprise2.wav"></audio></td><td><audio controls src="static/EMORL-demo/1_emo/EMORL/surprise2.wav"></audio></td></tr>
         </tbody>
       </table>
     </div>
@@ -201,7 +205,7 @@
           <tr><td>Surprise</td><td>chose</td><td><audio controls src="static/some_test_audio/cosyvoice2/instruct_14.wav"></audio></td><td><audio controls src="static/some_test_audio/emospeech/8_41_4.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS without EPE/AY1_CH_OW1_Z_DH_4_8_1_3.wav"></audio></td><td><audio controls src="static/some_test_audio/EME-TTS/AY1_CH_OW1_Z_DH_4_8_1_3.wav"></audio></td></tr>
         </tbody>
       </table>
-    </div>
+        </div>
     <h3 class="title is-5">Sentence 2: Rabbit gave dog a hurrying up sort of nudge.</h3>
     <div class="table-wrapper">
       <table class="table is-bordered is-fullwidth is-centered">
@@ -269,6 +273,6 @@
         </tbody>
       </table>
     </div>
-  </div>
+    </div>
 </section>
 <p class="has-text-centered mt-5">Thanks for your patience!<br><br><br><br><br></p>
